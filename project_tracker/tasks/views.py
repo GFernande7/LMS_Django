@@ -1,13 +1,9 @@
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404
-from django.urls import reverse
 from .models import Project, Task
 from django.views import View
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from django.shortcuts import render
 from .forms import FeedbackForm, ProjectForm, TaskForm
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import send_mail
 
 def index(request):
