@@ -40,6 +40,9 @@ class BugReport(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.title
+
 class FeatureRequest(models.Model):
     STATUS_CHOICES = [
         ('Review', 'Рассмотрение'),
@@ -78,3 +81,6 @@ class FeatureRequest(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
