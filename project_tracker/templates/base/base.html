@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <!-- Общий заголовок для всех страниц -->
+      <h1>Проект project-tracker</h1>
+    </header>
+    {% include 'base/nav.html' only with param='Django' %}
+    <main>
+        {% block content %}
+        <!-- Основное содержимое страницы -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Общий футер для всех страниц -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <h1>Список проектов</h1>
+    <ul>
+        {% for project in project_list %}
+            <li><a href="{% url 'tasks:project_detail' project.id %}">{{ project.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
