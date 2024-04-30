@@ -2,6 +2,11 @@
 
 {% block content %}
     <h1>Список проектов</h1>
+    
+        <!-- Ссылка на создание нового проекта -->
+    <p><a href="{% url 'tasks:create_project' %}">Создать новый проект</a></p>
+    
+    
     <ul>
         {% for project in project_list %}
             <li><a href="{% url 'tasks:project_detail' project.id %}">{{ project.name }}</a></li>
