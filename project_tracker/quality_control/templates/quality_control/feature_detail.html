@@ -1,6 +1,11 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+    <p><a href="{% url 'quality_control:update_feature' featurerequest.id %}">Изменить улучшение</a></p>
+
+    <p><a href="{% url 'quality_control:delete_feature' featurerequest.id %}" onclick="return confirm('Вы уверены, что хотите удалить это улучшение?');">Удалить улучшение</a></p>
+
+
     <h1>{{ featurerequest.title }}</h1>
     <p>{{ featurerequest.description }}</p>
     <p>status: {{ featurerequest.status }}</p>
